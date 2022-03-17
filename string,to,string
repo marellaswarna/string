@@ -1,0 +1,97 @@
+public class class2 {
+    
+    public class2(){
+        //class2 collections:
+//there are three types of collections:
+//1.list, 2.set, 3.map
+
+//list datatype:
+list<string>studentnames=new list<string>();
+system.Debug(studentnames);
+//output:DEBUG|()
+//add datatype:
+studentnames.add('swarna');//(0)
+studentnames.add('kavitha');//(1)
+studentnames.add('harini');//(2)
+studentnames.add('vasu');//(3)
+studentnames.add('swapna');//(4)
+system.debug(studentnames);//(5)
+
+//output:DEBUG|()(swarna, kavitha, harini, vasu, swapna)
+
+string stunames=studentnames[2];
+system.debug(stunames);
+
+//output:|DEBUG|harini
+
+//size datatype:
+system.debug(studentnames.size());
+//output:|DEBUG|:5
+
+//clearall datatype:(work avathundi kakapothya last use chayali)
+//studentnames.clear();
+//system.debug(studentnames);
+//output:|DEBUG|:()
+
+//add datatype(or)replace datattype:
+studentnames.add(4,'smiley');
+system.debug(studentnames);
+
+//output:|DEBUG|(swarna, kavitha, harini, vasu, smiley, swapna)
+
+//new list :
+
+list<string>studentnamesnew=new list<string>{'srinu','malli','rama','kamashi','rajeswari'};
+ system.debug(studentnamesnew);   
+//output:DEBUG|(srinu, malli, rama, kamashi, rajeswari)
+
+//addall datatype:
+
+studentnames.addall(studentnamesnew);
+system.debug(studentnames);
+
+//output:DEBUG|:(swarna, kavitha, harini, vasu, smiley, swapna, srinu, malli, rama, kamashi, ...)
+
+
+//cloned method:
+
+list<string>clonedlist=studentnames.clone();
+system.debug(clonedlist);
+//contains method:
+system.debug(studentnames.contains('swarna'));//checking the datatvalues'swarna':output:true
+
+//output:DEBUG|:((0)swarna, (1)kavitha, (2)harini, (3)vasu, smiley, swapna, srinu, malli, rama, kamashi, ...)
+//equal method:
+system.debug(studentnames.equals(clonedlist));//output:true
+clonedlist.add('prasad');
+//equal method:
+system.debug(studentnames.equals(clonedlist));//output:false
+
+//get method:
+system.debug(studentnames.get(3));//(0,1,2,3,)
+//output:DEBUG|:vasu
+
+//remove methode:
+system.debug(studentnames.remove(3));
+//output:DEBUG|:vasu
+
+studentnames.set(6,'swathi');
+system.debug(studentnames);
+
+//output:|DEBUG|((0)swarna, (1)kavitha,(2) harini,(3) smiley, (4)swapna, (5)srinu, (6)swathi, rama, kamashi, rajeswari)
+
+
+//to string:
+string stustring=studentnames.tostring();
+system.debug(stustring);
+//output:|DEBUG|(swarna, kavitha, harini, smiley, swapna, srinu, swathi, rama, kamashi, rajeswari)
+
+studentnames.clear();
+system.debug(studentnames);
+//output:()
+system.debug(studentnames.isempty());
+//output:DEBUG|:true
+
+    }
+
+}
